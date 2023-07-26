@@ -16,37 +16,69 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container header-menu">
             <img class="logo" src="assets/logo.svg">
+            <nav>
+                <button class="btn active" onclick="goMenu('landing-screen',this)">Home</button>
+                <button class="btn" onclick="goMenu('references',this)">References</button>
+                <button class="btn" onclick="goMenu('services',this)">Services</button>
+                <button class="btn" onclick="goMenu('about',this)">About Me</button>
+                <button class="btn" onclick="goMenu('contact',this)">Contact</button>
+            </nav>
         </div>
+
     </header>
-
-    <nav>
-        <!-- Sayfanın gezinme bağlantıları (menü) buraya gelebilir -->
-    </nav>
-
     <main>
         <!-- Sayfanın ana içeriği buraya gelebilir -->
         <section>
             <div class="objeler"></div>
-            <div class="container">
+            <div class="container screens landing-screen">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="first-screen-cards">
                             <h1>Let your dreams come true</h1>
-                            <p>Empowering Your Digital Transformation Journey. Discover the Future with Cutting-edge Solutions and Innovative Strategies. Our Expert Team is Dedicated to Delivering Excellence in Every Step.</p>
+                            <p>Empowering Your Digital Transformation Journey. Discover the Future with Cutting-edge
+                                Solutions and Innovative Strategies. Me and My Team is Dedicated to Delivering
+                                Excellence in Every Step.</p>
                             <div class="button-group">
-                                <button class="btn btn-primary">Get Contact</button>
+                                <a href="#" class="btn btn-primary">Get Contact</a>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="container screens references">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="first-screen-cards">
+                            <h1>My Recent Projects</h1>
+                            <p>I left happy customers behind us and also i still follow them to keep it straight. 😊</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        KARTLAR
+                    </div>
+                </div>
 
-        <section>
+            </div>
+            <div class="container screens about">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                        <div class="first-screen-cards">
+                            <h1>Let your dreams come true</h1>
+                            <p>Empowering Your Digital Transformation Journey. Discover the Future with Cutting-edge
+                                Solutions and Innovative Strategies. Me and My Team is Dedicated to Delivering
+                                Excellence in Every Step.</p>
+                            <div class="button-group">
+                                <a href="#" class="btn btn-primary">Get Contact</a>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
         </section>
 
 
@@ -57,6 +89,9 @@
 
     <footer>
     </footer>
+    <script>
+        var screenName = "landingScreen";
+    </script>
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
         {
@@ -67,12 +102,17 @@
     }
     </script>
     <script type="module">
-
         import * as THREE from 'three';
 
-        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-        import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+        import {
+            OrbitControls
+        } from 'three/addons/controls/OrbitControls.js';
+        import {
+            GLTFLoader
+        } from 'three/addons/loaders/GLTFLoader.js';
+        import {
+            RGBELoader
+        } from 'three/addons/loaders/RGBELoader.js';
 
         let camera, scene, renderer, kask;
         let yRotationSpeed = 0.00015;
@@ -86,12 +126,12 @@
             const container = document.getElementsByClassName("objeler")[0];
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20);
-            if(screen.width > 1024) {
+            if (screen.width > 1024) {
                 camera.position.set(-1.7, 0, 3.5);
             } else {
                 camera.position.set(0, -1, 7);
             }
-            
+
 
             scene = new THREE.Scene();
 
@@ -116,9 +156,11 @@
                         kask = gltf.scene;
 
                         // Kaskın üzerinde beyaz bir ışık eklemek için
-                        const pointLight = new THREE.PointLight(0xffffff, 25); // Beyaz renkte nokta ışığı ve ışık şiddeti 5
+                        const pointLight = new THREE.PointLight(0xffffff,
+                            25); // Beyaz renkte nokta ışığı ve ışık şiddeti 5
                         const kaskPosition = gltf.scene.position;
-                        pointLight.position.set(kaskPosition.x, kaskPosition.y + 5, kaskPosition.z); // Kaskın pozisyonuna göre ışığı yerleştirin
+                        pointLight.position.set(kaskPosition.x, kaskPosition.y + 5, kaskPosition
+                            .z); // Kaskın pozisyonuna göre ışığı yerleştirin
                         scene.add(pointLight);
 
                         render();
@@ -128,7 +170,9 @@
 
                 });
 
-            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
             const scaleFactor = 1; // Ölçek faktörü
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setPixelRatio(window.devicePixelRatio);
@@ -163,9 +207,43 @@
                 kask.rotation.x += xRotationSpeed; // Y ekseni etrafında dönüş hızı
             }
 
+            if (screenName == "landing-screen") {
+                animateCameraPosition(-1.7, 0, 3.5);
+            }
+
+            if (screenName == "references") {
+                animateCameraPosition(-1.7, 0, 2);
+            }
+
+            if(screenName == "about") {
+                animateCameraPosition(1.7, 0.5, 3.5);
+            }
+
+            if(screenName == "services") {
+                animateCameraPosition(0,0,2);
+                kask.rotation.y = 0;
+                kask.rotation.x = 0;
+            }
+
+            if(screenName == "contact") {
+                animateCameraPosition(-3, 0, 3.5);
+            }
+
 
             renderer.render(scene, camera);
 
+        }
+
+        function animateCameraPosition(targetX, targetY, targetZ) {
+            const speed = 0.05; // Kamera animasyon hızı
+
+            const deltaX = targetX - camera.position.x;
+            const deltaY = targetY - camera.position.y;
+            const deltaZ = targetZ - camera.position.z;
+
+            camera.position.x += deltaX * speed;
+            camera.position.y += deltaY * speed;
+            camera.position.z += deltaZ * speed;
         }
 
         function render() {
@@ -174,8 +252,8 @@
             animate();
 
         }
-
     </script>
+    <script src="assets/functions.js"></script>
 </body>
 
 </html>

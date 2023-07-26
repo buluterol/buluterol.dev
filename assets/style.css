@@ -32,7 +32,7 @@ header {
 }
 
 .first-screen-cards {
-    margin-top: 250px;
+    margin-top: 350px;
 }
 
 .first-screen-cards h1 {
@@ -53,4 +53,86 @@ img.logo {
 
 header .container {
     max-height: 100%;
+}
+
+.btn.btn-primary {
+    background: transparent;
+    border: 1px #ffffff57 solid;
+    border-radius: 0px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.btn.btn-primary:hover {
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.objeler canvas {
+    max-width: 100% !important;
+}
+
+.screens {
+    display: none;
+}
+
+.screens.landing-screen {
+    display: block;
+}
+
+.container.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav button.btn {
+    color: white !important;
+    font-family: 'Victor Mono', monospace;
+    margin-left: 40px;
+}
+
+button.btn.active {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-width: 3px;
+    padding-bottom: 15px;
+}
+
+.mt-6 {
+    margin-top: 200px;
+}
+
+.fade-in {
+    animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
