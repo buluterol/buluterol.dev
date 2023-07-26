@@ -31,8 +31,8 @@
             <script type="importmap">
                 {
 				"imports": {
-					"three": "build/three.module.js",
-					"three/addons/": "jsm/"
+					"three": "/buluterol.dev/build/three.module.js",
+					"three/addons/": "/buluterol.dev/jsm/"
 				}
 			}
 		    </script>
