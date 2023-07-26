@@ -46,3 +46,11 @@ header {
 .first-screen-cards * {
     margin: 15px 0px;
 }
+
+img.logo {
+    height: 50px;
+}
+
+header .container {
+    max-height: 100%;
+}

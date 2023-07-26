@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>Logo</h1>
+            <img class="logo" src="assets/logo.svg">
         </div>
     </header>
 
@@ -86,7 +86,12 @@
             const container = document.getElementsByClassName("objeler")[0];
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.25, 20);
-            camera.position.set(-1.7, 0, 3.5);
+            if(screen.width > 1024) {
+                camera.position.set(-1.7, 0, 3.5);
+            } else {
+                camera.position.set(0, -1, 7);
+            }
+            
 
             scene = new THREE.Scene();
 
