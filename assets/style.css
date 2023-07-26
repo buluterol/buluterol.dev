@@ -5,3 +5,44 @@ body {
     font-family: 'Barlow', sans-serif;
     color: white;
 }
+
+.objeler {
+    position: absolute;
+    top:0;
+    width:100%;
+    left:0;
+    height:100%;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #121212bd;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.first-screen-cards {
+    margin-top: 250px;
+}
+
+.first-screen-cards h1 {
+    font-family: 'Victor Mono', monospace;
+}
+
+.first-screen-cards {
+    max-width: 500px;
+}
+
+.first-screen-cards * {
+    margin: 15px 0px;
+}
