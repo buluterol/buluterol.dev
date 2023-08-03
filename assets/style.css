@@ -265,3 +265,13 @@ img.profile-picture {
     border-radius: 300px;
     margin: 0px 20px 20px 0px;
 }
+
+form input,
+form textarea{
+    width: 100%;
+    border-radius: 10px;
+    padding:10px;
+    border: 1px solid #ffffff4d;
+    background:none;
+    color:white;
+}
