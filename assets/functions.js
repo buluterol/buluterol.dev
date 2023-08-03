@@ -12,6 +12,19 @@ function goMenu(className, button) {
     $(button).addClass("active");
 }
 
+function openNav(element) {
+    $(element).attr("onclick" , "closeNav(this)");
+    $(element).addClass("active");
+    $("nav").addClass("active");
+}
+
+function closeNav(element) {
+    $(element).attr("onclick" , "openNav(this)");
+    $(element).removeClass("active");
+    $("nav").removeClass("active");
+}
+
+
 
 $(document).ready(function() {
     // Tüm formların submit olayını ele alalım
