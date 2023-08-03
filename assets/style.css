@@ -257,3 +257,11 @@ span.reference-description small {
 .orange {
     background: darkorange;
 }
+
+img.profile-picture {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+    margin: 0px 20px 20px 0px;
+}
