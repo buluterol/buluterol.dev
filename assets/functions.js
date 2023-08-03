@@ -10,6 +10,8 @@ function goMenu(className, button) {
     console.log(screenName);
     $("nav button").removeClass("active");
     $(button).addClass("active");
+    $('.navmenu-hamburger').removeClass("active");
+    $('nav.active').removeClass("active");
 }
 
 function openNav(element) {
