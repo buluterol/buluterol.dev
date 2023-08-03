@@ -135,3 +135,125 @@ button.btn.active {
         opacity: 0;
     }
 }
+
+
+@media only screen and (max-width:1280px) {
+    .container.header-menu nav {
+        display: none;
+    }
+    
+    .first-screen-cards {
+        padding: 20px;
+    }
+}
+
+.references .swiper-slide img {
+    height: 200px;
+    width: 400px;
+}
+
+span.reference-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: #00000091;
+    width: 100%;
+    color: white;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-weight: 600;
+}
+
+span.reference-description small {
+    font-weight: 300;
+}
+
+.swiper-slide a {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.first-screen-cards.minus-margin-top {
+    margin-top: 150px;
+}
+
+.service-card {
+    display: flex;
+    padding: 20px;
+    background: #ffffff26;
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+    align-items: flex-start;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom:20px;
+}
+
+.service-icon {
+    margin: 10px;
+    border-radius: 10px;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon img {
+    width: 32px;
+    height: 32px;
+    mix-blend-mode: overlay;
+}
+
+.purple {
+    background: purple;
+}
+
+.service-description h4 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.service-description {
+    max-width: calc(100% - 100px);
+}
+
+.first-screen-cards.minus-margin-top.left-aligned {
+    margin-right: auto;
+}
+
+.first-screen-cards.minus-margin-top.right-aligned {
+    margin-left: auto;
+}
+
+.green {
+    background: seagreen;
+}
+
+.red {
+    background: indianred;
+}
+
+.yellow {
+    background: yellowgreen;
+}
+
+.blue {
+    background: cornflowerblue;
+}
+
+.gray {
+    background: gray;
+}
+
+.pink {
+    background: hotpink;
+}
+
+.orange {
+    background: darkorange;
+}
