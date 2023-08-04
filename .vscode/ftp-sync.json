@@ -1,0 +1,26 @@
+{
+    "remotePath": "buluterol.dev",
+    "host": "lupin.veridyen.com",
+    "username": "unalt",
+    "password": "zSaA2oR5:F:90r",
+    "port": 21,
+    "secure": true,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [],
+        "path": ""
+    },
+    "detailedSyncSummary": true
+}
