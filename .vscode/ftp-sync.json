@@ -19,7 +19,8 @@
         "\\.DS_Store",
         "\\models",
         "\\jsm",
-        "\\node_modules"
+        "\\node_modules",
+        "\\textures"
     ],
     "generatedFiles": {
         "extensionsToInclude": [],
