@@ -16,7 +16,10 @@
     "ignore": [
         "\\.vscode",
         "\\.git",
-        "\\.DS_Store"
+        "\\.DS_Store",
+        "\\models",
+        "\\jsm",
+        "\\node_modules"
     ],
     "generatedFiles": {
         "extensionsToInclude": [],
