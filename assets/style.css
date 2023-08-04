@@ -358,3 +358,9 @@ nav.active .btn {
 nav {
     transition: all 0.2s;
 }
+
+section {
+    max-height: 100vh;
+    overflow: auto;
+    padding-bottom: 150px;
+}
